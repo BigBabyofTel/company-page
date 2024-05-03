@@ -1,45 +1,49 @@
+import Courses from "./components/courses";
+import Freelesson from "./components/freelesson";
 import Header from "./components/header";
-import { Menu } from "lucide-react";
+import { Button } from "@nextui-org/button";
+import * as z from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const schema = z.object({
+  email: z.string().email(),
+});
+
+type Schema = z.infer<typeof schema>;
 
 export default function App() {
+  const { register, handleSubmit } = useForm<Schema>({
+    resolver: zodResolver(schema),
+  });
+  const onSubmit = (data: Schema) => {
+    console.log(data);
+  };
+
   return (
     <>
       <Header />
-      <div className="flex justify-end relative right-8 top-16">
-      <section className="flex justify-end items-center w-1/2">
-      <ul className="p-2 flex flex-row justify-around w-1/2 bg-blue-500">
-        <li className="">
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="">Our Course</a>
-        </li>
-        <li>
-          <a href="">Gallery</a>
-        </li>
-        <li>
-          <a href="">News</a>
-        </li>
-        <li>
-          <a href="">Contacts</a>
-        </li>
-      </ul>
-        <button className="bg-blue-500">
-          <Menu size="40px" />
-        </button>
-      </section>
-      </div>
-      <div className="mx-8">
-        <img src="./hero-section.webp" alt="" className="" />
-        <div className="bg-gray-200 relative bottom-[55rem] w-1/2">
-          <p>
-            "Our language center offers group and personal lessons in English
-            and other modern languages for all ages and levels of knowledge."
-          </p>
-          <h1 className="text-7xl">
-            Improve your <span className="text-[#0432ff]">English</span> Skills
-          </h1>
+      <img src="./hero-section.webp" alt="" className="p-2" />
+      <Freelesson />
+      <Courses />
+      <div className="text-center">
+        <div className="">
+        <h1 className="text-3xl text-blue-600">JOIN OUR NEWSLETTER</h1>
+        <p className="text-blue-600">
+          Subscribe to our newsletter to recieve the latest news & updates.
+        </p>
         </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="">
+          <input
+            {...register("email")}
+            placeholder="Email"
+            name="email"
+            className="m-2 p-3"
+          />
+          <Button size="md" color="success">
+            Send
+          </Button>
+        </form>
       </div>
     </>
   );
