@@ -30,7 +30,7 @@ export default function FreeLesson() {
   };
 
   return (
-    <div className="m-2 p-3 flex justify-center w-screen">
+    <div className="my-5 p-3 flex justify-center w-full">
       <Button onPress={onOpen} size="lg">Free Lesson?</Button>
       <Modal
         isOpen={isOpen}

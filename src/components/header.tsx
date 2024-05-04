@@ -9,8 +9,8 @@ import { MapPin, Phone, Menu } from "lucide-react";
 export default function Header() {
   return (
     <header className=" p-2 w-full">
-      <div className="m-2 flex items-center">
-        <div className="flex items-center">
+      <div className="m-2 flex items-center w-full">
+        <div className="flex items-center w-">
           <img src="logo.svg" alt="logo" className="w-1/5 md:w-[5%]" />
           <h1 className="text-3xl md:text-5xl text-bold w-1/2 md:mr-[600px]">
             <span className="text-[#0432ff]">Lingo</span>Academy
