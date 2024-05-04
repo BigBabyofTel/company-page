@@ -23,27 +23,29 @@ export default function App() {
   return (
     <>
       <Header />
-      <img src="./hero-section.webp" alt="" className="p-2" />
+      <img src="./hero.jpg" alt="" className="w-screen p-2" />
       <Freelesson />
       <Courses />
-      <div className="text-center">
+      <div className="p-2 border">
+      <div className="w-full text-center border h-[600px] flex items-center justify-center flex-col bg-[url('./newsletter-bg.jpg')] bg-top bg-cover overflow-x-hidden">
         <div className="">
-        <h1 className="text-3xl text-blue-600">JOIN OUR NEWSLETTER</h1>
-        <p className="text-blue-600">
-          Subscribe to our newsletter to recieve the latest news & updates.
-        </p>
+          <h1 className="text-3xl p-2">JOIN OUR NEWSLETTER</h1>
+          <p className="p-5">
+            Subscribe to our newsletter to recieve the latest news & updates.
+          </p>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex items-center">
           <input
             {...register("email")}
             placeholder="Email"
             name="email"
-            className="m-2 p-3"
+            className="m-1 p-2 border rounded-xl"
           />
-          <Button size="md" color="success">
+          <Button size="md" color="success" type="submit">
             Send
           </Button>
         </form>
+      </div>
       </div>
     </>
   );

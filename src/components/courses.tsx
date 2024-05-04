@@ -1,14 +1,12 @@
 import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
 
 export default function Courses() {
-
-
-    return (
-        <>
-        <div className="flex justify-center m-5 p-2">
+  return (
+    <>
+      <div className="w-screen flex justify-center m-5 p-2">
         <h2 className="text-3xl text-bold p-5">Courses We Offer</h2>
       </div>
-      <div className="md:grid md:gap-1 md:grid-col-2 md:grid-row-2 md:place-content-around flex flex-col items-center mb-10">
+      <div className="md:grid md:gap-1 md:grid-col-2 md:grid-row-2 md:place-content-around flex flex-col items-center mb-10 border">
         <Card className="w-2/3 md:w-11/12 m-2 p-1 shadow-2xl md:col-start-1 md:col-end-1">
           <CardHeader>English for Beginners</CardHeader>
           <CardContent>
@@ -42,6 +40,6 @@ export default function Courses() {
           <CardFooter>Easy-to-learn English course for children.</CardFooter>
         </Card>
       </div>
-      </>
-    )
+    </>
+  );
 }

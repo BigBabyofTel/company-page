@@ -8,7 +8,7 @@ import { MapPin, Phone, Menu } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="m-3 p-2 w-full">
+    <header className=" p-2 w-full">
       <div className="m-2 flex items-center">
         <div className="flex items-center">
           <img src="logo.svg" alt="logo" className="w-1/5 md:w-[5%]" />
