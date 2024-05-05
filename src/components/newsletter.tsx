@@ -21,7 +21,7 @@ export default function Newsletter() {
       }
 
 return (
-    <div className=" w-full p-2">
+    <div className="w-full mx-auto">
       <div className="text-center h-[600px] flex items-center justify-center flex-col bg-[url('./newsletter-bg.jpg')] bg-top bg-cover">
         <div className="">
           <h1 className="text-3xl p-2">JOIN OUR NEWSLETTER</h1>
