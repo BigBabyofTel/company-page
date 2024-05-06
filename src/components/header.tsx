@@ -43,27 +43,27 @@ export default function Header() {
 
       <hr />
       {isOpen && (
-        <ul className="md:hidden flex flex-col items-center p-5">
-          <li className="text-xl">
+        <ul className="lg:hidden flex flex-col items-center p-5">
+          <li className="text-xl hover:text-blue-400">
             <a href="">Home</a>
           </li>
-          <li className="text-xl">
+          <li className="text-xl hover:text-blue-400">
             <a href="">Our Courses</a>
           </li>
-          <li className="text-xl">
+          <li className="text-xl hover:text-blue-400">
             <a href="">Gallery</a>
           </li>
-          <li className="text-xl">
+          <li className="text-xl hover:text-blue-400">
             <a href="">News</a>
           </li>
-          <li className="text-xl">
+          <li className="text-xl hover:text-blue-400">
             <a href="">Contacts</a>
           </li>
         </ul>
       )}
       <ul className=" flex items-center justify-between">
         <li className="flex p-5 text-sm md:text-lg">
-          <MapPin className="mr-2"/>9 Valley St. Brooklyn, NY 11203
+          <MapPin className="mr-2" />9 Valley St. Brooklyn, NY 11203
         </li>
         <li className="flex p-5 text-sm md:text-lg">
           <Phone className="mr-2" />
