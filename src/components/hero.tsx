@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="w-full h-[600px] bg-[url('./hero.jpg')] bg-center bg-cover flex items-start justify-center flex-col">
+    <div className="w-full h-[600px] bg-[url('./hero-section.webp')] bg-center bg-cover flex items-start justify-center flex-col">
       {/* <img src="./hero.jpg" alt="" className="w-full p-2" /> */}
       <aside className="bg-gray-400 rounded-lg p-3">
         <p className="text-xl">
