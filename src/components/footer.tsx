@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="h-[300px]">
+    <footer className="w-full h-[300px]">
       <div className="flex flex-col md:flex-row items-center">
         <section className="flex items-center justify-center w-fit">
           <img src="logo.svg" alt="logo" className="w-1/5 md:w-[13%]" />

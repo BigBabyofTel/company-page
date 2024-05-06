@@ -23,18 +23,18 @@ export default function Contact() {
 
   return (
     <>
-      <div className="border h-[500px] my-10 p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-blue-500 to-cyan-200">
-        <section className="h-full w-1/3 ">
+      <div id="contacts" className="w-full border h-[500px] my-10 p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-blue-500 to-cyan-200">
+        <section className="h-full w-full">
             <h2 className="text-4xl my-5">Get In Touch</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="h-2/3 flex flex-col justify-evenly">
-                <div className="flex justify-between">
+                <div className="">
             <input {...register("name")} placeholder="Name" name="name" className=" p-2 border rounded-xl"/>
             <input {...register("email")} placeholder="Email" name="email" className="p-2 border rounded-xl"/>
             </div>
             <textarea {...register("message")} placeholder="Message" name="message" className="p-2 border rounded-xl"></textarea>
             </form>
         </section>
-        <section className="w-1/3 flex flex-col justify-between">
+        <section className="w-full flex flex-col justify-between">
             <h2 className="text-4xl my-5">Our Teachers</h2>
             <article className="h-full flex flex-col items-center justify-around ">
                 <aside className="">teacher 1</aside>

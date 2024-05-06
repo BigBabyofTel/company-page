@@ -1,7 +1,7 @@
 export default function LatestNews() {
   return (
     <>
-      <section className="w-full h-full my-10">
+      <section id="news" className="w-full h-full my-10">
         <h1 className="text-3xl text-center p-5 font-bold">LATEST NEWS</h1>
         <div className="h-full w-full grid gap-8 grid-col-1 md:grid-cols-3 grid-rows-3 md:grid-rows-1">
           <div className="w-full h-full row-start-1 col-start-1 md:col-start-1 md:row-start-2">
