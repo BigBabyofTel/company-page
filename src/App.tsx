@@ -16,9 +16,8 @@ export default function App() {
       <Courses />
       <Newsletter />
       <Latestnews />
-      <Contact/>
-      <Footer/>
-       
+      <Contact />
+      <Footer />
     </>
   );
 }

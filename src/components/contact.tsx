@@ -2,6 +2,7 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Phone } from "lucide-react";
+import { Button } from "@nextui-org/button";
 
 
 const schema = z.object({
@@ -23,15 +24,17 @@ export default function Contact() {
 
   return (
     <>
-      <div id="contacts" className="w-full border h-[500px] my-10 p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-blue-500 to-cyan-200">
-        <section className="h-full w-full">
+      <div id="contacts" className="w-full border h-[600px] my-10 p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-blue-500 to-cyan-200">
+        <section className="h-full w-full p-2">
             <h2 className="text-4xl my-5">Get In Touch</h2>
-            <form onSubmit={handleSubmit(onSubmit)} className="h-2/3 flex flex-col justify-evenly">
-                <div className="">
+            <form onSubmit={handleSubmit(onSubmit)} className="h-4/5 flex flex-col">
+                <div className="w-[70%] p-2 h-full flex flex-col justify-evenly">
             <input {...register("name")} placeholder="Name" name="name" className=" p-2 border rounded-xl"/>
             <input {...register("email")} placeholder="Email" name="email" className="p-2 border rounded-xl"/>
-            </div>
             <textarea {...register("message")} placeholder="Message" name="message" className="p-2 border rounded-xl"></textarea>
+            <Button variant="faded" color="primary" >Send</Button>
+            </div>
+            
             </form>
         </section>
         <section className="w-full flex flex-col justify-between">

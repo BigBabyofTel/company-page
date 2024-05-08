@@ -7,7 +7,7 @@ export default function Courses() {
         <h2 className="text-3xl text-bold p-5">Courses We Offer</h2>
       </div>
       <div className="md:grid md:gap-1 md:grid-col-2 md:grid-row-2 md:place-content-around flex flex-col items-center mb-10">
-        <Card className="w-2/3 md:w-11/12 m-2 p-1 shadow-2xl md:col-start-1 md:col-end-1">
+        <Card className="w-2/3 md:w-11/12 m-2 p-1 shadow-2xl md:col-start-1 md:col-end-1 bg-[url('./images/learners.jpg')] bg-cover bg-no-repeat">
           <CardHeader>English for Beginners</CardHeader>
           <CardContent>
             <span className="text-large">$25</span>{" "}
