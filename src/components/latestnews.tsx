@@ -21,7 +21,7 @@ export default function LatestNews() {
             </p>
           </div>
           <div className=" w-screen md:w-fit h-full row-start-3 md:col-start-3 md:row-start-2">
-            <img src="./news-3.jpg" alt="" className="w-[97%]"/>
+            <img src="./news-3.jpg" alt="" className="w-full"/>
             <h3 className="text-center m-1 my-4 font-bold p-1">June 12, 2024</h3>
             <hr className="w-1/2 mx-auto my-2" />
             <p className=" font-bold text-center">

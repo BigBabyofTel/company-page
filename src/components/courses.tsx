@@ -3,7 +3,7 @@ import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
 export default function Courses() {
   return (
     <>
-      <div id="our-courses" className="flex justify-center m-5 p-2">
+      <div id="courses" className="flex justify-center m-5 p-2">
         <h2 className="text-3xl text-bold p-5">Courses We Offer</h2>
       </div>
       <div className="md:grid md:gap-1 md:grid-col-2 md:grid-row-2 md:place-content-around flex flex-col items-center mb-10">

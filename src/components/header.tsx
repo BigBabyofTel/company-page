@@ -37,7 +37,7 @@ export default function Header() {
                 <a href="">Gallery</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <a href="#contact">Contact</a>
+                <a href="#contacts">Contact</a>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -47,7 +47,7 @@ export default function Header() {
       <div className="w-1/2"></div>
 
       <ul className=" flex items-end justify-between h-[150px] md:h-[75px]">
-        <li className="flex p-5 text-sm md:text-lg">
+        <li id="home" className="flex p-5 text-sm md:text-lg">
           <MapPin className="mr-2" />9 Valley St. Brooklyn, NY 11203
         </li>
         <li className="flex p-5 text-sm md:text-lg">
