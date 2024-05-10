@@ -5,15 +5,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import logo from "@/images/logo.svg"
 
 export default function Header() {
   return (
     <header className="w-full">
-      <div className=" w-full border-b fixed z-50 flex items-center justify-between p-2 bg-gray-400 md:static">
-        <div className="flex items-center">
-          <img src="logo.svg" alt="logo" className="w-[15%] md:w-[8%] mr-1" />
+      <div className=" w-full border-b fixed z-50 flex items-center justify-between p-2 bg-[rgb(221,206,184)] md:static">
+        <div className="flex items-center h-full">
+        <img src={logo} alt="" className="w-[20%] md:w-1/12 p-1 ml-1 mr-2" />
           <h1 className="text-3xl md:text-5xl text-bold font-bold mr-9">
-            <span className="text-[#0432ff] font-bold">Lingo</span>Academy
+            <span className="text-[rgb(78,101,122)] font-bold">Lingo</span>Academy
           </h1>
         </div>
         <div>
@@ -32,9 +33,6 @@ export default function Header() {
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
                 <a href="#news">News</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-xl">
-                <a href="">Gallery</a>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
                 <a href="#contacts">Contact</a>

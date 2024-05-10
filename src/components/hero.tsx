@@ -1,14 +1,13 @@
 export default function Hero() {
   return (
-    <div  className="w-full h-[600px] bg-[url('./images/hero-section.webp')] bg-center bg-cover flex items-start justify-center flex-col">
+    <div  className="w-full h-[800px] bg-[url('./images/hero-section.webp')] bg-center bg-cover flex items-start justify-center flex-col">
       {/* <img src="./hero.jpg" alt="" className="w-full p-2" /> */}
-      <aside className="bg-gray-400 rounded-lg p-3">
+      <aside className="bg-[rgb(221,206,184)] rounded-lg p-3">
         <p className="text-xl">
-          Our language center offers group and personal lessons in English and
-          other modern languages for all ages and levels of knowledge.
+          Our language center offers group and personal lessons in English.
         </p>
         <h1 className="text-6xl">
-          IMPROVE YOUR <span className="text-indigo-600">ENGLISH</span> SKILLS
+          IMPROVE YOUR <span className="text-[rgb(78,101,122)]">ENGLISH</span> SKILLS
         </h1>
       </aside>
     </div>
