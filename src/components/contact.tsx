@@ -3,7 +3,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Phone } from "lucide-react";
 import { Button } from "@nextui-org/button";
-import { FormEvent, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const schema = z.object({
@@ -13,16 +12,17 @@ const schema = z.object({
 });
 
 type Schema = z.infer<typeof schema>;
-
+/*
 const id = import.meta.env.VITE_serviceId
 const template = import.meta.env.VITE_template
 const key = import.meta.env.VITE_publicKey
-
+*/
 export default function Contact() {
   const { register, handleSubmit, formState: {errors} } = useForm<Schema>({
     resolver: zodResolver(schema),
   });
-/*
+
+  /*
 const onSubmit: SubmitHandler<Schema> = async (data) => {
   try{
     const response = await emailjs.sendForm(
@@ -40,7 +40,7 @@ const onSubmit: SubmitHandler<Schema> = async (data) => {
         <section className="h-full w-full p-2">
           <h2 className="text-4xl my-5 text-center text-white font-bold">Get In Touch</h2>
           <form
-            onSubmit={onsubmit}
+            
             className="h-4/5 w-full flex flex-col items-center"
           >
             <div className="w-96 md:w-1/2 p-2 h-full flex flex-col justify-evenly items-center">
