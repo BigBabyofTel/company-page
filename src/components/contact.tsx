@@ -6,8 +6,6 @@ const id = import.meta.env.VITE_serviceId;
 const template = import.meta.env.VITE_templateId;
 const key = import.meta.env.VITE_publicKey;
 
-console.log(template);
-
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
 
@@ -18,7 +16,9 @@ export default function Contact() {
     } else {
       emailjs.sendForm(id, template, form.current, key).then(
         (result) => {
-          console.log(result.text);
+          alert("Your message has been sent successfully!");
+          console.log(result.status);
+          form.current?.reset();
         },
         (error) => {
           console.log(error.text);
@@ -44,6 +44,7 @@ export default function Contact() {
           >
             <div className="w-96 md:w-1/2 p-2 h-full flex flex-col justify-evenly items-center">
               <input
+                required
                 type="text"
                 placeholder="Name"
                 name="name"
@@ -51,6 +52,7 @@ export default function Contact() {
               />
 
               <input
+                required
                 type="email"
                 placeholder="Email"
                 name="email"
@@ -58,6 +60,7 @@ export default function Contact() {
               />
 
               <textarea
+                required
                 placeholder="Message"
                 name="message"
                 className="p-2 border rounded-xl w-2/3"
