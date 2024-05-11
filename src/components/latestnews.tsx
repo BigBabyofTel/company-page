@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import news1 from "@/images/news1.jpg";
 import news2 from "@/images/news-2.jpg";
 import news3 from "@/images/news-3.jpg";
@@ -5,7 +6,8 @@ import news3 from "@/images/news-3.jpg";
 export default function LatestNews() {
   return (
     <>
-      <section id="news" className="w-full h-full my-10">
+    <Element name='news'>
+      <section className="w-full h-full my-10">
         <h1 className="text-3xl text-center p-5 font-bold">LATEST NEWS</h1>
         <div className="h-full w-full flex flex-col md:flex-row items-center justify-evenly">
           <div className="w-3/4 h-full m-4">
@@ -36,6 +38,7 @@ export default function LatestNews() {
           </div>
         </div>
       </section>
+      </Element>
     </>
   );
 }

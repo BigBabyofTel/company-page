@@ -1,6 +1,8 @@
 import { Button } from "@nextui-org/button";
 import emailjs from "@emailjs/browser";
 import { FormEvent, useRef } from "react";
+import { Element } from "react-scroll";
+
 
 const id = process.env.VITE_serviceId as string;
 const template = process.env.VITE_templateId as string;
@@ -29,8 +31,8 @@ export default function Contact() {
 
   return (
     <>
+    <Element name="contacts">
       <div
-        id="contacts"
         className="w-full border h-[600px] my-10 p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-[rgb(16,46,62)] to-[rgb(48,115,154)]"
       >
         <section className="h-full w-full p-2">
@@ -78,6 +80,7 @@ export default function Contact() {
           </form>
         </section>
       </div>
+      </Element>
     </>
   );
 }

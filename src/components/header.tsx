@@ -5,16 +5,18 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import logo from "@/images/logo.svg"
+import logo from "@/images/logo.svg";
+import { Link } from "react-scroll";
 
 export default function Header() {
   return (
     <header className="w-full">
       <div className=" w-full border-b fixed z-50 flex items-center justify-between p-2 bg-[rgb(221,206,184)] md:static">
         <div className="flex items-center h-full">
-        <img src={logo} alt="" className="w-[20%] md:w-1/12 p-1 ml-1 mr-2" />
+          <img src={logo} alt="" className="w-[20%] md:w-1/12 p-1 ml-1 mr-2" />
           <h1 className="text-3xl md:text-5xl text-bold font-bold mr-9">
-            <span className="text-[rgb(78,101,122)] font-bold">Lingo</span>Academy
+            <span className="text-[rgb(78,101,122)] font-bold">Lingo</span>
+            Academy
           </h1>
         </div>
         <div>
@@ -26,16 +28,16 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="p-5 relative right-5">
               <DropdownMenuItem className="text-xl">
-                <a href="#home">Home</a>
+                <Link to="home">Home</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <a href="#courses">Courses</a>
+                <Link to="courses">Courses</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <a href="#news">News</a>
+                <Link to="news">News</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <a href="#contacts">Contact</a>
+                <Link to="contacts">Contact</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

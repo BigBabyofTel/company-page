@@ -1,5 +1,10 @@
+import {Element } from 'react-scroll'
+
+
 export default function Hero() {
   return (
+    <>
+    <Element name='home'>
     <div  className="w-full h-[800px] bg-[url('./images/hero.jpg')] bg-center bg-cover flex items-start justify-center flex-col">
       {/* <img src="./hero.jpg" alt="" className="w-full p-2" /> */}
       <aside className="bg-[rgb(221,206,184)] rounded-lg p-3">
@@ -11,5 +16,7 @@ export default function Hero() {
         </h1>
       </aside>
     </div>
+    </Element>
+    </>
   );
 }
