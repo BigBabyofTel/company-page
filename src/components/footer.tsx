@@ -1,4 +1,5 @@
 import logo from "@/images/logo.svg";
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Footer() {
   return (
@@ -37,6 +38,7 @@ export default function Footer() {
           </ul>
         </section>
       </div>
+      <ScrollToTop smooth />
       <hr />
       <section className="h-10 text-center font-bold bg-[rgb(221,206,184)]">
         <h2 className="text-xl">© 2024 LingoAcademy </h2>

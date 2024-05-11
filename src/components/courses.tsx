@@ -10,7 +10,7 @@ export default function Courses() {
             Courses We Offer
           </h2>
 
-          <section className="h-full w-full md:h-3/4 m-1 p-5 flex flex-col items-center justify-evenly md:w-[51%] md:grid md:gap-3 md:grid-col-2 md:grid-row-2 mx-auto">
+          <section className="h-full w-full md:h-[90%] m-1 p-5 flex flex-col items-center justify-evenly md:w-[51%] md:grid md:gap-3 md:grid-col-2 md:grid-row-2 mx-auto">
             <Card
               isBlurred
               className="w-full h-1/6 md:w-full md:h-full md:col-start-1 md:row-start-1"

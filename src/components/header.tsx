@@ -28,16 +28,16 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="p-5 relative right-5">
               <DropdownMenuItem className="text-xl">
-                <Link to="home">Home</Link>
+                <Link to="home" smooth>Home</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <Link to="courses">Courses</Link>
+                <Link to="courses" smooth>Courses</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <Link to="news">News</Link>
+                <Link to="news" smooth>News</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="text-xl">
-                <Link to="contacts">Contact</Link>
+                <Link to="contacts" smooth>Contact</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
