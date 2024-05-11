@@ -2,9 +2,9 @@ import { Button } from "@nextui-org/button";
 import emailjs from "@emailjs/browser";
 import { FormEvent, useRef } from "react";
 
-const id = import.meta.env.VITE_serviceId;
-const template = import.meta.env.VITE_templateId;
-const key = import.meta.env.VITE_publicKey;
+const id = process.env.VITE_serviceId as string;
+const template = process.env.VITE_templateId as string;
+const key = process.env.VITE_publicKey as string;
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
