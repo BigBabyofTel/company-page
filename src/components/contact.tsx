@@ -1,8 +1,8 @@
 import { Button } from "@nextui-org/button";
 import emailjs from "@emailjs/browser";
 import { FormEvent, useRef } from "react";
-import { Element } from "react-scroll";
-
+import { Input, Textarea } from "@nextui-org/input";
+import { User, Mail, MessageSquare } from "lucide-react";
 
 const id = process.env.VITE_serviceId as string;
 const template = process.env.VITE_templateId as string;
@@ -31,10 +31,7 @@ export default function Contact() {
 
   return (
     <>
-    <Element name="contacts">
-      <div
-        className="w-full border h-[600px] my-10 p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-[rgb(16,46,62)] to-[rgb(48,115,154)]"
-      >
+      <div className="w-full border h-[600px] p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-[rgb(16,46,62)] to-[rgb(48,115,154)]">
         <section className="h-full w-full p-2">
           <h2 className="text-4xl my-5 text-center text-white font-bold">
             Get In Touch
@@ -44,35 +41,45 @@ export default function Contact() {
             onSubmit={sendEmail}
             ref={form}
           >
-            <div className="w-96 md:w-1/2 p-2 h-full flex flex-col justify-evenly items-center">
-              <input
-                required
-                type="text"
-                placeholder="Name"
-                name="name"
-                className=" p-2 border rounded-xl w-2/3"
-              />
+            <div className="w-96 md:w-1/2 p-2 h-full flex flex-col justify-evenly items-center bg-white rounded-xl">
+              <div className="w-full flex justify-around">
+                <Input
+                  variant="underlined"
+                  required
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  startContent={<User color="rgb(78,101,122)" />}
+                  style={{ border: "none" }}
+                  className="w-[30%]"
+                />
 
-              <input
-                required
-                type="email"
-                placeholder="Email"
-                name="email"
-                className="p-2 border rounded-xl w-2/3"
-              />
-
-              <textarea
+                <Input
+                  variant="underlined"
+                  required
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  startContent={<Mail color="rgb(78,101,122)" />}
+                  style={{ border: "none" }}
+                  className="w-[30%]"
+                />
+              </div>
+              <Textarea
+                variant="underlined"
                 required
                 placeholder="Message"
                 name="message"
-                className="p-2 border rounded-xl w-2/3"
-              ></textarea>
+                startContent={<MessageSquare color="rgb(78,101,122)" />}
+                style={{ border: "none" }}
+                className="w-[80%]"
+              />
 
               <Button
+              
                 type="submit"
-                variant="faded"
-                color="primary"
-                className="w-2/3"
+                variant="shadow"
+                className="w-2/3 text-white bg-[rgb(78,101,122)]"
               >
                 Send
               </Button>
@@ -80,7 +87,6 @@ export default function Contact() {
           </form>
         </section>
       </div>
-      </Element>
     </>
   );
 }

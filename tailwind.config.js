@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { nextui } from "@nextui-org/react";
+
 export const darkMode = ["class"];
 export const content = [
   "./pages/**/*.{ts,tsx}",
@@ -7,6 +8,7 @@ export const content = [
   "./app/**/*.{ts,tsx}",
   "./src/**/*.{ts,tsx}",
   "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  "node_modules/flowbite-react/lib/esm/**/*.{js,ts,jsx,tsx}",
 ];
 export const prefix = "";
 export const theme = {
