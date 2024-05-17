@@ -1,9 +1,9 @@
 import { Card, CardBody } from "@nextui-org/card";
 
-export default function Courses() {
+export default function Courses({coursesRef}: {coursesRef: React.MutableRefObject<HTMLDivElement | null>}) {
   return (
     <>
-      <div className="w-full h-[1400px] md:h-[900px] bg-[rgb(221,206,184)] mx-auto">
+      <div ref={coursesRef} className="w-full h-[1400px] md:h-[900px] bg-[rgb(221,206,184)] mx-auto">
         <h2 className="text-4xl pt-10 font-bold md:text-5xl text-center text-[rgb(78,101,122)] md:p-5 md:mb-4">
           Courses We Offer
         </h2>
@@ -15,9 +15,11 @@ export default function Courses() {
           >
             <CardBody className="flex justify-center">
               <span className="text-3xl">English for Beginners</span>{" "}
-              <span className="text-2xl">¥3,000</span>{" "}
-              <span className=" text-large">price per hour</span>{" "}
-              <span className="text-large">Our best English course for starter level.</span>
+              <span className="text-2xl text-slate-500">¥3,000</span>{" "}
+              <span className=" text-large text-slate-500">price per hour</span>{" "}
+              <span className="text-large font-semibold">
+                Our best English course for starter level.
+              </span>
             </CardBody>
           </Card>
           <Card
@@ -26,25 +28,31 @@ export default function Courses() {
           >
             <CardBody className="flex justify-center">
               <span className="text-3xl">Online Learning</span>{" "}
-              <span className="text-2xl">¥3,000</span>{" "}
-              <span className=" text-large">price per hour</span>{" "}
-              <span className="text-large">Perfect if you prefer distance education.</span>
+              <span className="text-2xl text-slate-500">¥3,000</span>{" "}
+              <span className=" text-large text-slate-500">price per hour</span>{" "}
+              <span className="text-large font-semibold">
+                Perfect if you prefer distance education.
+              </span>
             </CardBody>
           </Card>
           <Card isBlurred className="w-full h-1/6 md:w-[350px] md:h-[350px]">
             <CardBody className="flex justify-center">
               <span className="text-3xl">English for Business</span>{" "}
-              <span className="text-2xl">¥4,000</span>{" "}
-              <span className="text-large">price per hour</span>{" "}
-              <span className="text-large">Business English course for managers.</span>
+              <span className="text-2xl text-slate-500">¥4,000</span>{" "}
+              <span className="text-large text-slate-500">price per hour</span>{" "}
+              <span className="text-large font-semibold">
+                Business English course for managers.
+              </span>
             </CardBody>
           </Card>
           <Card isBlurred className="w-full h-1/6 md:w-[350px] md:h-[350px]">
             <CardBody className="flex justify-center">
               <span className="text-3xl">English for kids</span>{" "}
-              <span className="text-2xl">¥3,000</span>{" "}
-              <span className="text-large">price per hour</span>{" "}
-              <span className="text-large">Easier English course for children.</span>
+              <span className="text-2xl text-slate-500">¥3,000</span>{" "}
+              <span className="text-large text-slate-500">price per hour</span>{" "}
+              <span className="text-large font-semibold">
+                Easier English course for children.
+              </span>
             </CardBody>
           </Card>
         </div>

@@ -8,7 +8,7 @@ const id = process.env.VITE_serviceId as string;
 const template = process.env.VITE_templateId as string;
 const key = process.env.VITE_publicKey as string;
 
-export default function Contact() {
+export default function Contact({contactRef}: {contactRef: React.MutableRefObject<HTMLDivElement | null>}) {
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -31,7 +31,9 @@ export default function Contact() {
 
   return (
     <>
-      <div className="w-full border h-[600px] p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-[rgb(16,46,62)] to-[rgb(48,115,154)]">
+      <div
+      ref={contactRef}
+       className="w-full border h-[600px] p-2 flex flex-col md:flex-row justify-around bg-gradient-to-r from-[rgb(16,46,62)] to-[rgb(48,115,154)]">
         <section className="h-full w-full p-2">
           <h2 className="text-4xl my-5 text-center text-white font-bold">
             Get In Touch
@@ -45,7 +47,7 @@ export default function Contact() {
               <div className="w-full h-1/3 flex flex-col 2xl:flex-row 2xl:items-center justify-around">
                 <Input
                   variant="underlined"
-                  required
+                  isRequired
                   type="text"
                   placeholder="Name"
                   name="name"
@@ -56,7 +58,7 @@ export default function Contact() {
 
                 <Input
                   variant="underlined"
-                  required
+                  isRequired
                   type="email"
                   placeholder="Email"
                   name="email"
@@ -67,7 +69,7 @@ export default function Contact() {
               </div>
               <Textarea
                 variant="underlined"
-                required
+                isRequired
                 placeholder="Message"
                 name="message"
                 startContent={<MessageSquare color="rgb(78,101,122)" />}
@@ -76,10 +78,10 @@ export default function Contact() {
               />
 
               <Button
-              
+              size="lg"
                 type="submit"
                 variant="shadow"
-                className="w-2/3 text-white bg-[rgb(78,101,122)]"
+                className="w-1/4 text-white bg-[rgb(78,101,122)]"
               >
                 Send
               </Button>

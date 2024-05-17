@@ -1,10 +1,18 @@
-import { useRef } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { forwardRef, useRef } from "react";
 import { useClickOutside } from "@react-hooks-library/core";
 import { Menu } from "lucide-react";
 
+interface Props {
+  isOpen: boolean
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  homeRef: React.MutableRefObject<HTMLDivElement | null>;
+  coursesRef: React.MutableRefObject<HTMLDivElement | null>;
+  contactRef: React.MutableRefObject<HTMLDivElement | null>;
+}
 
 
-export default function Navbar({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen: React.Dispatch<React.SetStateAction<boolean>>}) {
+const Navbar = ({isOpen, setIsOpen, homeRef, coursesRef, contactRef}: Props) => {
     
     const ref = useRef(null);
   
@@ -32,13 +40,13 @@ export default function Navbar({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen:
     
               <ul className="hidden 2xl:flex 2xl:w-full 2xl:justify-evenly">
                 <li>
-                  <a href="">Home</a>
+                  <button onClick={() => homeRef.current?.scrollIntoView({behavior: 'smooth'})} className="hover:underline hover:underline-offset-8">Home</button>
                 </li>
                 <li>
-                  <a href="">Courses</a>
+                  <button onClick={() => coursesRef.current?.scrollIntoView({behavior: 'smooth'})} className="hover:underline hover:underline-offset-8">Courses</button>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <button onClick={() => contactRef.current?.scrollIntoView({behavior: 'smooth'})} className="hover:underline hover:underline-offset-8">Contact</button>
                 </li>
               </ul>
             </div>
@@ -48,3 +56,5 @@ export default function Navbar({isOpen, setIsOpen}: {isOpen: boolean, setIsOpen:
         </nav>
       );
 }
+
+export default forwardRef(Navbar) 

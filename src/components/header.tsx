@@ -1,8 +1,15 @@
+/* eslint-disable react-refresh/only-export-components */
 import logo from "@/images/logo.svg";
 import Navbar from "./navbar";
-import { useState } from "react";
+import React, { forwardRef, useState } from "react";
 
-export default function Header() {
+interface Props {
+  homeRef: React.MutableRefObject<HTMLDivElement | null>;
+  coursesRef: React.MutableRefObject<HTMLDivElement | null>;
+  contactRef: React.MutableRefObject<HTMLDivElement | null>;
+}
+
+function Header({ homeRef, coursesRef, contactRef }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,17 +21,35 @@ export default function Header() {
           Academy
         </h1>
       </div>
-      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} homeRef={homeRef} coursesRef={coursesRef} contactRef={contactRef} />
       {isOpen ? (
         <ul className="flex flex-col items-start w-full 2xl:hidden p-5 left-0 right-0 md:top-[6.5%] bg-[rgb(221,206,184)] row-start-2 row-end-3">
           <li className="py-2 font-bold text-[rgb(78,101,122)]">
-            <a href="">Home</a>
+            <button
+              onClick={() =>
+                homeRef.current?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Home
+            </button>
           </li>
           <li className="py-2 font-bold text-[rgb(78,101,122)]">
-            <a href="">Courses</a>
+            <button
+              onClick={() =>
+                coursesRef.current?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Courses
+            </button>
           </li>
           <li className="py-2 font-bold text-[rgb(78,101,122)]">
-            <a href="">Contact</a>
+            <button
+              onClick={() =>
+                contactRef.current?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Contact
+            </button>
           </li>
         </ul>
       ) : null}
@@ -32,8 +57,9 @@ export default function Header() {
   );
 }
 
-{
-  /*
+export default forwardRef(Header);
+
+/*
  <div className="w-[20%] flex flex-col justify-end p-1 md:left-[79%] md:absolute md:top-[11.2%] md:flex-row">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -55,4 +81,3 @@ export default function Header() {
         </div>
 
 */
-}
