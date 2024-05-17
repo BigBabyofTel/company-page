@@ -1,18 +1,33 @@
-
 import logo from "@/images/logo.svg";
 import Navbar from "./navbar";
+import { useState } from "react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="flex bg-[rgb(221,206,184)] fixed p-2 z-50 md:w-full md:h-[10%] md:justify-between md:static">
-      <div className="flex items-center ">
-        <img src={logo} alt="" className="w-[20%] p-2 mx-2 md:w-[10%]" />
+    <header className="grid gap-3 grid-col-[1fr_max-content] bg-[rgb(221,206,184)] fixed p-2 z-50 w-full md:static items-center">
+      <div className="flex items-center col-start-1 col-end-2 ">
+        <img src={logo} alt="" className="w-[15%] p-1 mx-2 md:w-[10%]" />
         <h1 className="text-2xl md:text-5xl">
           <span className="text-[rgb(78,101,122)] font-bold">Lingo</span>
           Academy
         </h1>
       </div>
-      <Navbar />
+      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen ? (
+        <ul className="flex flex-col items-start w-full 2xl:hidden p-5 left-0 right-0 md:top-[6.5%] bg-[rgb(221,206,184)] row-start-2 row-end-3">
+          <li className="py-2 font-bold text-[rgb(78,101,122)]">
+            <a href="">Home</a>
+          </li>
+          <li className="py-2 font-bold text-[rgb(78,101,122)]">
+            <a href="">Courses</a>
+          </li>
+          <li className="py-2 font-bold text-[rgb(78,101,122)]">
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      ) : null}
     </header>
   );
 }

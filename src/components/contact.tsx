@@ -41,8 +41,8 @@ export default function Contact() {
             onSubmit={sendEmail}
             ref={form}
           >
-            <div className="w-96 md:w-1/2 p-2 h-full flex flex-col justify-evenly items-center bg-white rounded-xl">
-              <div className="w-full flex justify-around">
+            <div className="w-96 md:w-3/4 p-2 h-full flex flex-col justify-evenly items-center bg-white rounded-xl">
+              <div className="w-full h-1/3 flex flex-col 2xl:flex-row 2xl:items-center justify-around">
                 <Input
                   variant="underlined"
                   required
@@ -51,7 +51,7 @@ export default function Contact() {
                   name="name"
                   startContent={<User color="rgb(78,101,122)" />}
                   style={{ border: "none" }}
-                  className="w-[30%]"
+                  className="2xl:w-[40%] w-full"
                 />
 
                 <Input
@@ -62,7 +62,7 @@ export default function Contact() {
                   name="email"
                   startContent={<Mail color="rgb(78,101,122)" />}
                   style={{ border: "none" }}
-                  className="w-[30%]"
+                  className="2xl:w-[40%] w-full"
                 />
               </div>
               <Textarea
@@ -72,7 +72,7 @@ export default function Contact() {
                 name="message"
                 startContent={<MessageSquare color="rgb(78,101,122)" />}
                 style={{ border: "none" }}
-                className="w-[80%]"
+                className="2xl:w-[90%]"
               />
 
               <Button
