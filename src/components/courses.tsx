@@ -30,7 +30,7 @@ export default function Courses({
           <Carousel
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 6500,
                 stopOnInteraction: false,
               }),
             ]}

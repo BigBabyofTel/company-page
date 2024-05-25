@@ -14,7 +14,7 @@ export const prefix = "";
 export const theme = {
   extend: {
     fontFamily: {
-      lato: ["Lato-Regular", "sans-serif"],
+      noto: ["Noto Sans", "sans-serif"],
     },
   },
   container: {
